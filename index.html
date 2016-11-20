@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <title>Sample Quiz</title>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+  <link rel="stylesheet" href="https://code.getmdl.io/1.2.1/material.indigo-pink.min.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="container">
+  <h1>Sample Quiz</h1>
+  <div class="quiz">
+    <div>
+      <input :id="quizContents[0][0]" type="radio" name="gender" :value="quizContents[0][0]" v-model="quizResults[0]">
+      <label :for="quizContents[0][0]">{{quizContents[0][0]}}</label>
+      <input :id="quizContents[0][1]" type="radio" name="gender" :value="quizContents[0][1]" v-model="quizResults[0]">
+      <label :for="quizContents[0][1]">{{quizContents[0][1]}}</label>
+      <input :id="quizContents[0][2]" type="radio" name="gender" :value="quizContents[0][2]" v-model="quizResults[0]">
+      <label :for="quizContents[0][2]">{{quizContents[0][2]}}</label>
+    </div>
+    <div>
+      <button v-on:click="submit" type="button">Submit</button>
+    </div>
+  </div>
+</div>
+  <script defer src="https://code.getmdl.io/1.2.1/material.min.js"></script>
+  <script src="https://unpkg.com/vue/dist/vue.js"></script>
+  <script>
+    var app = new Vue({
+      el: '.container',
+      data: {
+        quizContents: [
+            [
+                "Hello",
+                "World",
+                "Foo"
+            ]
+        ],
+        quizResults: [
+            ""
+        ]
+      },
+      methods: {
+        submit: function () {
+          console.log('Results: ', this.quizResults)
+        }
+      }
+
+    });
+  </script>
+</body>
+</html>

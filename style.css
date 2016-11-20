@@ -1,0 +1,16 @@
+body {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+}
+.container {
+  background: #fafafa;
+  box-shadow: #ccc 1px 1px;
+  border: 1px solid #eee;
+  border-radius: 1px;
+  padding: 10px;
+  min-height: 600px;
+}
+.quiz div {
+  padding: 10px;
+}
